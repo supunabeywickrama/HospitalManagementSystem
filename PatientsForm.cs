@@ -34,26 +34,48 @@ namespace HospitalManagementSystem
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            string name = txtName.Text;
-            int age = int.Parse(txtAge.Text);
-            string gender = cmbGender.SelectedItem.ToString();
-            string contact = txtContact.Text;
-            string address = txtAddress.Text;
-
-            string query = "INSERT INTO Patients (Name, Age, Gender, Contact, Address) VALUES (@Name, @Age, @Gender, @Contact, @Address)";
-            SqlParameter[] parameters = new SqlParameter[]
+            try
             {
-                new SqlParameter("@Name", name),
-                new SqlParameter("@Age", age),
-                new SqlParameter("@Gender", gender),
-                new SqlParameter("@Contact", contact),
-                new SqlParameter("@Address", address)
-            };
+                string name = txtName.Text;
+                int age = int.Parse(txtAge.Text);
+                string gender = cmbGender.SelectedItem?.ToString() ?? "";
+                string contact = txtContact.Text;
+                string address = txtAddress.Text;
 
-            DatabaseHelper.ExecuteNonQuery(query, parameters);
-            MessageBox.Show("Patient added successfully");
-            LoadPatients();
+                if (string.IsNullOrWhiteSpace(name) || string.IsNullOrWhiteSpace(gender))
+                {
+                    MessageBox.Show("Name and Gender are required.");
+                    return;
+                }
+
+                string query = "INSERT INTO Patients (Name, Age, Gender, Contact, Address) VALUES (@Name, @Age, @Gender, @Contact, @Address)";
+                SqlParameter[] parameters = new SqlParameter[]
+                {
+            new SqlParameter("@Name", name),
+            new SqlParameter("@Age", age),
+            new SqlParameter("@Gender", gender),
+            new SqlParameter("@Contact", contact),
+            new SqlParameter("@Address", address)
+                };
+
+                int rowsAffected = DatabaseHelper.ExecuteNonQuery(query, parameters);
+
+                if (rowsAffected > 0)
+                {
+                    MessageBox.Show("Patient added successfully.");
+                    LoadPatients();
+                }
+                else
+                {
+                    MessageBox.Show("Failed to add patient.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
         }
+
 
         private void dataGridViewPatients_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -74,20 +96,30 @@ namespace HospitalManagementSystem
 
             int id = Convert.ToInt32(dataGridViewPatients.CurrentRow.Cells["PatientID"].Value);
             string name = txtName.Text;
-            int age = int.Parse(txtAge.Text);
-            string gender = cmbGender.SelectedItem.ToString();
+            if (!int.TryParse(txtAge.Text, out int age))
+            {
+                MessageBox.Show("Please enter a valid numeric age.");
+                return;
+            }
+            string gender = cmbGender.SelectedItem?.ToString() ?? "";
             string contact = txtContact.Text;
             string address = txtAddress.Text;
+
+            if (string.IsNullOrWhiteSpace(name) || string.IsNullOrWhiteSpace(gender))
+            {
+                MessageBox.Show("Name and Gender are required.");
+                return;
+            }
 
             string query = "UPDATE Patients SET Name=@Name, Age=@Age, Gender=@Gender, Contact=@Contact, Address=@Address WHERE PatientID=@PatientID";
             SqlParameter[] parameters = new SqlParameter[]
             {
                 new SqlParameter("@Name", name),
                 new SqlParameter("@Age", age),
-                new SqlParameter("@Gender", gender),
+                 new SqlParameter("@Gender", gender),
                 new SqlParameter("@Contact", contact),
                 new SqlParameter("@Address", address),
-                new SqlParameter("@PatientID", id)
+                 new SqlParameter("@PatientID", id)
             };
 
             DatabaseHelper.ExecuteNonQuery(query, parameters);

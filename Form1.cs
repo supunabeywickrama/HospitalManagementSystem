@@ -24,7 +24,7 @@ namespace HospitalManagementSystem
             string password = txtPassword.Text.Trim();
 
             // Use parameterized query to prevent SQL injection
-            string query = "SELECT * FROM Users_1 WHERE Username = @username AND Password = @password";
+            string query = "SELECT * FROM Users WHERE Username = @username AND Password = @password";
             SqlParameter[] parameters = new SqlParameter[]
             {
                     new SqlParameter("@username", username),

@@ -175,6 +175,12 @@
       <DependentUpon>DashboardForm.cs</DependentUpon>
     </Compile>
     <Compile Include="DatabaseHelper.cs" />
+    <Compile Include="DoctorsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoctorsForm.Designer.cs">
+      <DependentUpon>DoctorsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -191,6 +197,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="DashboardForm.resx">
       <DependentUpon>DashboardForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoctorsForm.resx">
+      <DependentUpon>DoctorsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
