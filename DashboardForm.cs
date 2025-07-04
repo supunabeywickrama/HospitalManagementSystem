@@ -22,5 +22,11 @@ namespace HospitalManagementSystem
             PatientsForm pf = new PatientsForm();
             pf.Show();
         }
+
+        private void mngDoctors_Click(object sender, EventArgs e)
+        {
+            PatientsForm pf = new PatientsForm();
+            pf.Show();
+        }
     }
 }

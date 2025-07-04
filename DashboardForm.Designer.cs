@@ -53,6 +53,7 @@
             this.mngDoctors.TabIndex = 1;
             this.mngDoctors.Text = "Manage Doctors";
             this.mngDoctors.UseVisualStyleBackColor = true;
+            this.mngDoctors.Click += new System.EventHandler(this.mngDoctors_Click);
             // 
             // appointments
             // 
