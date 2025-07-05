@@ -30,5 +30,15 @@ namespace HospitalManagementSystem
             form.Show();
             this.Hide();
         }
+
+        private void lblWelcome_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
