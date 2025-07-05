@@ -51,5 +51,11 @@ namespace HospitalManagementSystem
         {
 
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Form1 gomain = new Form1();
+            gomain.Show();
+        }
     }
 }

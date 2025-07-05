@@ -1,4 +1,5 @@
-﻿using System.Data;
+﻿using System;
+using System.Data;
 using System.Data.SqlClient;
 
 public static class DatabaseHelper
@@ -46,5 +47,10 @@ public static class DatabaseHelper
                 return command.ExecuteNonQuery();
             }
         }
+    }
+
+    internal static object ExecuteScalar(string query, object value)
+    {
+        throw new NotImplementedException();
     }
 }

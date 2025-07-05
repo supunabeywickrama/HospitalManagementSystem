@@ -84,19 +84,19 @@ namespace HospitalManagementSystem
 
         private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
-            if (dataGridViewBills.CurrentRow == null) return;
+           if (dataGridViewBills.CurrentRow == null) return;
 
             int billId = Convert.ToInt32(dataGridViewBills.CurrentRow.Cells["BillID"].Value);
-            string patient = dataGridViewBills.CurrentRow.Cells["Patient"].Value.ToString();
-            string doctor = dataGridViewBills.CurrentRow.Cells["Doctor"].Value.ToString();
-            string date = Convert.ToDateTime(dataGridViewBills.CurrentRow.Cells["BillDate"].Value).ToShortDateString();
-            string total = dataGridViewBills.CurrentRow.Cells["TotalAmount"].Value.ToString();
+            string patient = dataGridViewBills.CurrentRow.Cells["PatientName"].Value.ToString();
+            string date = Convert.ToDateTime(dataGridViewBills.CurrentRow.Cells["BillingDate"].Value).ToShortDateString();
+            string total = Convert.ToDecimal(dataGridViewBills.CurrentRow.Cells["Amount"].Value).ToString("0.00");
+
 
             // Header
             e.Graphics.DrawString("HOSPITAL INVOICE", new Font("Arial", 20, FontStyle.Bold), Brushes.Black, 200, 50);
             e.Graphics.DrawString("Date: " + date, new Font("Arial", 10), Brushes.Black, 50, 100);
             e.Graphics.DrawString("Patient: " + patient, new Font("Arial", 10), Brushes.Black, 50, 120);
-            e.Graphics.DrawString("Doctor: " + doctor, new Font("Arial", 10), Brushes.Black, 50, 140);
+           // e.Graphics.DrawString("Doctor: " + doctor, new Font("Arial", 10), Brushes.Black, 50, 140);
             e.Graphics.DrawString("Invoice ID: " + billId.ToString(), new Font("Arial", 10), Brushes.Black, 50, 160);
 
             // Line
@@ -117,16 +117,18 @@ namespace HospitalManagementSystem
                 string desc = row["Description"].ToString();
                 string amt = Convert.ToDecimal(row["Amount"]).ToString("0.00");
 
-                e.Graphics.DrawString(desc, new Font("Arial", 10), Brushes.Black, 50, y);
-                e.Graphics.DrawString(amt, new Font("Arial", 10), Brushes.Black, 600, y);
                 y += 20;
+                e.Graphics.DrawString(desc, new Font("Arial", 10), Brushes.Black, 50, y);
+                e.Graphics.DrawString(amt, new Font("Arial", 10), Brushes.Black, 600, y);              
             }
 
             // Line
-            e.Graphics.DrawLine(Pens.Black, 50, y, 750, y);
             y += 20;
+            e.Graphics.DrawLine(Pens.Black, 50, y, 750, y);
+            
 
             // Total
+            y += 20;
             e.Graphics.DrawString("Total: Rs. " + total, new Font("Arial", 12, FontStyle.Bold), Brushes.Black, 600, y);
         }
 
