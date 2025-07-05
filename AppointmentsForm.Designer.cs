@@ -96,7 +96,7 @@
             this.lblDate.BackColor = System.Drawing.Color.Transparent;
             this.lblDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblDate.Location = new System.Drawing.Point(274, 57);
+            this.lblDate.Location = new System.Drawing.Point(274, 55);
             this.lblDate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDate.Name = "lblDate";
             this.lblDate.Size = new System.Drawing.Size(129, 15);
@@ -109,7 +109,7 @@
             this.lblNotes.BackColor = System.Drawing.Color.Transparent;
             this.lblNotes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNotes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblNotes.Location = new System.Drawing.Point(351, 115);
+            this.lblNotes.Location = new System.Drawing.Point(351, 119);
             this.lblNotes.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNotes.Name = "lblNotes";
             this.lblNotes.Size = new System.Drawing.Size(52, 15);
@@ -118,7 +118,7 @@
             // 
             // txtNotes
             // 
-            this.txtNotes.Location = new System.Drawing.Point(407, 114);
+            this.txtNotes.Location = new System.Drawing.Point(407, 115);
             this.txtNotes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtNotes.Multiline = true;
             this.txtNotes.Name = "txtNotes";
@@ -128,7 +128,7 @@
             // 
             // dtpAppointment
             // 
-            this.dtpAppointment.Location = new System.Drawing.Point(407, 57);
+            this.dtpAppointment.Location = new System.Drawing.Point(407, 55);
             this.dtpAppointment.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dtpAppointment.Name = "dtpAppointment";
             this.dtpAppointment.Size = new System.Drawing.Size(151, 20);
@@ -140,7 +140,7 @@
             this.btnBook.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnBook.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBook.ForeColor = System.Drawing.Color.Teal;
-            this.btnBook.Location = new System.Drawing.Point(253, 170);
+            this.btnBook.Location = new System.Drawing.Point(246, 176);
             this.btnBook.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnBook.Name = "btnBook";
             this.btnBook.Size = new System.Drawing.Size(101, 37);
@@ -165,14 +165,12 @@
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(405, -38);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(0);
+            this.pictureBox1.Location = new System.Drawing.Point(362, -26);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(140, 113);
+            this.pictureBox1.Size = new System.Drawing.Size(253, 97);
             this.pictureBox1.TabIndex = 10;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.UseWaitCursor = true;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click_1);
             // 
             // AppointmentsForm
             // 
@@ -180,7 +178,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(600, 366);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.dataGridViewAppointments);
             this.Controls.Add(this.btnBook);
             this.Controls.Add(this.dtpAppointment);
@@ -191,6 +188,7 @@
             this.Controls.Add(this.cmbDoctor);
             this.Controls.Add(this.cmbPatient);
             this.Controls.Add(this.lblPatient);
+            this.Controls.Add(this.pictureBox1);
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "AppointmentsForm";
             this.Text = "AppointmentsForm";
@@ -213,6 +211,6 @@
         private System.Windows.Forms.DateTimePicker dtpAppointment;
         private System.Windows.Forms.Button btnBook;
         private System.Windows.Forms.DataGridView dataGridViewAppointments;
-        public System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
