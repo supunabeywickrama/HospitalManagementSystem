@@ -156,5 +156,10 @@ namespace HospitalManagementSystem
         {
 
         }
+
+        private void dataGridViewBills_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
