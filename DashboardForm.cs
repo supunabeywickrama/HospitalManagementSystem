@@ -25,7 +25,26 @@ namespace HospitalManagementSystem
 
         private void mngDoctors_Click(object sender, EventArgs e)
         {
-            
+            DoctorsForm doctorsForm = new DoctorsForm();
+            doctorsForm.Show();
+        }
+
+        private void appointments_Click(object sender, EventArgs e)
+        {
+            AppointmentsForm appointmentsForm = new AppointmentsForm();
+            appointmentsForm.Show();
+        }
+
+        private void billing_Click(object sender, EventArgs e)
+        {
+            BillsForm billsForm = new BillsForm();
+            billsForm.Show();
+        }
+
+        private void medicatebtn_Click(object sender, EventArgs e)
+        {
+            MedicationsForm medicationsForm = new MedicationsForm();
+            medicationsForm.Show();
         }
     }
 }

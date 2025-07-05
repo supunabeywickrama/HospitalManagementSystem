@@ -16,8 +16,8 @@ namespace HospitalManagementSystem
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new DoctorsForm());
-
+            // Application.Run(new MedicationsForm());
+            Application.Run(new Form1());
         }
     }
 }

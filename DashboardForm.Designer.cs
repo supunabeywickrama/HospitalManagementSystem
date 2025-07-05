@@ -32,7 +32,7 @@
             this.mngDoctors = new System.Windows.Forms.Button();
             this.appointments = new System.Windows.Forms.Button();
             this.billing = new System.Windows.Forms.Button();
-            this.reports = new System.Windows.Forms.Button();
+            this.medicatebtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnPatients
@@ -63,6 +63,7 @@
             this.appointments.TabIndex = 2;
             this.appointments.Text = "Appointments";
             this.appointments.UseVisualStyleBackColor = true;
+            this.appointments.Click += new System.EventHandler(this.appointments_Click);
             // 
             // billing
             // 
@@ -72,22 +73,24 @@
             this.billing.TabIndex = 3;
             this.billing.Text = "Billing";
             this.billing.UseVisualStyleBackColor = true;
+            this.billing.Click += new System.EventHandler(this.billing_Click);
             // 
-            // reports
+            // medicatebtn
             // 
-            this.reports.Location = new System.Drawing.Point(389, 260);
-            this.reports.Name = "reports";
-            this.reports.Size = new System.Drawing.Size(166, 46);
-            this.reports.TabIndex = 4;
-            this.reports.Text = "Reports";
-            this.reports.UseVisualStyleBackColor = true;
+            this.medicatebtn.Location = new System.Drawing.Point(389, 260);
+            this.medicatebtn.Name = "medicatebtn";
+            this.medicatebtn.Size = new System.Drawing.Size(166, 46);
+            this.medicatebtn.TabIndex = 4;
+            this.medicatebtn.Text = "Medication ";
+            this.medicatebtn.UseVisualStyleBackColor = true;
+            this.medicatebtn.Click += new System.EventHandler(this.medicatebtn_Click);
             // 
             // DashboardForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.reports);
+            this.Controls.Add(this.medicatebtn);
             this.Controls.Add(this.billing);
             this.Controls.Add(this.appointments);
             this.Controls.Add(this.mngDoctors);
@@ -104,6 +107,6 @@
         private System.Windows.Forms.Button mngDoctors;
         private System.Windows.Forms.Button appointments;
         private System.Windows.Forms.Button billing;
-        private System.Windows.Forms.Button reports;
+        private System.Windows.Forms.Button medicatebtn;
     }
 }
