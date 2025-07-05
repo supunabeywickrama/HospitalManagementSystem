@@ -89,5 +89,15 @@ namespace HospitalManagementSystem
                 txtDescription.Text = row.Cells["Description"].Value.ToString();
             }
         }
+
+        private void lblName_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblDescription_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

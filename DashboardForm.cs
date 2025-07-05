@@ -46,5 +46,10 @@ namespace HospitalManagementSystem
             MedicationsForm medicationsForm = new MedicationsForm();
             medicationsForm.Show();
         }
+
+        private void DashboardForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

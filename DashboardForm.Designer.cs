@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DashboardForm));
             this.btnPatients = new System.Windows.Forms.Button();
             this.mngDoctors = new System.Windows.Forms.Button();
             this.appointments = new System.Windows.Forms.Button();
@@ -37,66 +38,96 @@
             // 
             // btnPatients
             // 
-            this.btnPatients.Location = new System.Drawing.Point(120, 156);
+            this.btnPatients.BackColor = System.Drawing.Color.Cyan;
+            this.btnPatients.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnPatients.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPatients.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnPatients.Location = new System.Drawing.Point(168, 124);
+            this.btnPatients.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnPatients.Name = "btnPatients";
-            this.btnPatients.Size = new System.Drawing.Size(147, 47);
+            this.btnPatients.Size = new System.Drawing.Size(110, 51);
             this.btnPatients.TabIndex = 0;
-            this.btnPatients.Text = "Manage Patients";
-            this.btnPatients.UseVisualStyleBackColor = true;
+            this.btnPatients.Text = "Manage\r\n Patients\r\n";
+            this.btnPatients.UseVisualStyleBackColor = false;
             this.btnPatients.Click += new System.EventHandler(this.btnPatients_Click);
             // 
             // mngDoctors
             // 
-            this.mngDoctors.Location = new System.Drawing.Point(301, 156);
+            this.mngDoctors.BackColor = System.Drawing.Color.Cyan;
+            this.mngDoctors.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.mngDoctors.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mngDoctors.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.mngDoctors.Location = new System.Drawing.Point(327, 124);
+            this.mngDoctors.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.mngDoctors.Name = "mngDoctors";
-            this.mngDoctors.Size = new System.Drawing.Size(151, 47);
+            this.mngDoctors.Size = new System.Drawing.Size(110, 49);
             this.mngDoctors.TabIndex = 1;
             this.mngDoctors.Text = "Manage Doctors";
-            this.mngDoctors.UseVisualStyleBackColor = true;
+            this.mngDoctors.UseVisualStyleBackColor = false;
             this.mngDoctors.Click += new System.EventHandler(this.mngDoctors_Click);
             // 
             // appointments
             // 
-            this.appointments.Location = new System.Drawing.Point(488, 156);
+            this.appointments.BackColor = System.Drawing.Color.Cyan;
+            this.appointments.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.appointments.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.appointments.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.appointments.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.appointments.Location = new System.Drawing.Point(406, 221);
+            this.appointments.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.appointments.Name = "appointments";
-            this.appointments.Size = new System.Drawing.Size(154, 47);
+            this.appointments.Size = new System.Drawing.Size(122, 37);
             this.appointments.TabIndex = 2;
             this.appointments.Text = "Appointments";
-            this.appointments.UseVisualStyleBackColor = true;
+            this.appointments.UseVisualStyleBackColor = false;
             this.appointments.Click += new System.EventHandler(this.appointments_Click);
             // 
             // billing
             // 
-            this.billing.Location = new System.Drawing.Point(190, 259);
+            this.billing.BackColor = System.Drawing.Color.Cyan;
+            this.billing.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.billing.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.billing.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.billing.Location = new System.Drawing.Point(101, 221);
+            this.billing.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.billing.Name = "billing";
-            this.billing.Size = new System.Drawing.Size(167, 47);
+            this.billing.Size = new System.Drawing.Size(110, 38);
             this.billing.TabIndex = 3;
             this.billing.Text = "Billing";
-            this.billing.UseVisualStyleBackColor = true;
+            this.billing.UseVisualStyleBackColor = false;
             this.billing.Click += new System.EventHandler(this.billing_Click);
             // 
             // medicatebtn
             // 
-            this.medicatebtn.Location = new System.Drawing.Point(389, 260);
+            this.medicatebtn.BackColor = System.Drawing.Color.Cyan;
+            this.medicatebtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.medicatebtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.medicatebtn.ForeColor = System.Drawing.Color.Black;
+            this.medicatebtn.Location = new System.Drawing.Point(250, 221);
+            this.medicatebtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.medicatebtn.Name = "medicatebtn";
-            this.medicatebtn.Size = new System.Drawing.Size(166, 46);
+            this.medicatebtn.Size = new System.Drawing.Size(110, 37);
             this.medicatebtn.TabIndex = 4;
             this.medicatebtn.Text = "Medication ";
-            this.medicatebtn.UseVisualStyleBackColor = true;
+            this.medicatebtn.UseVisualStyleBackColor = false;
             this.medicatebtn.Click += new System.EventHandler(this.medicatebtn_Click);
             // 
             // DashboardForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(600, 366);
             this.Controls.Add(this.medicatebtn);
             this.Controls.Add(this.billing);
             this.Controls.Add(this.appointments);
             this.Controls.Add(this.mngDoctors);
             this.Controls.Add(this.btnPatients);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "DashboardForm";
             this.Text = "DashboardForm";
+            this.Load += new System.EventHandler(this.DashboardForm_Load);
             this.ResumeLayout(false);
 
         }

@@ -45,5 +45,10 @@ namespace HospitalManagementSystem
                 MessageBox.Show("Invalid username or password!", "Login Failed");
             }
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

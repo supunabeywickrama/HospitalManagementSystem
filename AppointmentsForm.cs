@@ -120,5 +120,15 @@ namespace HospitalManagementSystem
                 MessageBox.Show("Error: " + ex.Message);
             }
         }
+
+        private void txtNotes_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

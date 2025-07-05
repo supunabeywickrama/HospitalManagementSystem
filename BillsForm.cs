@@ -130,5 +130,24 @@ namespace HospitalManagementSystem
             e.Graphics.DrawString("Total: Rs. " + total, new Font("Arial", 12, FontStyle.Bold), Brushes.Black, 600, y);
         }
 
+        private void lblPatient_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblDate_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtAmount_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dtpDate_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
