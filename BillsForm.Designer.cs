@@ -53,10 +53,9 @@
             this.lblPatient.BackColor = System.Drawing.Color.Transparent;
             this.lblPatient.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPatient.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblPatient.Location = new System.Drawing.Point(62, 26);
-            this.lblPatient.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPatient.Location = new System.Drawing.Point(83, 32);
             this.lblPatient.Name = "lblPatient";
-            this.lblPatient.Size = new System.Drawing.Size(132, 20);
+            this.lblPatient.Size = new System.Drawing.Size(159, 25);
             this.lblPatient.TabIndex = 0;
             this.lblPatient.Text = "Select Patient :";
             this.lblPatient.Click += new System.EventHandler(this.lblPatient_Click);
@@ -67,10 +66,9 @@
             this.lblAmount.BackColor = System.Drawing.Color.Transparent;
             this.lblAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAmount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblAmount.Location = new System.Drawing.Point(62, 73);
-            this.lblAmount.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblAmount.Location = new System.Drawing.Point(83, 90);
             this.lblAmount.Name = "lblAmount";
-            this.lblAmount.Size = new System.Drawing.Size(81, 20);
+            this.lblAmount.Size = new System.Drawing.Size(99, 25);
             this.lblAmount.TabIndex = 1;
             this.lblAmount.Text = "Amount :";
             // 
@@ -80,10 +78,9 @@
             this.lblDate.BackColor = System.Drawing.Color.Transparent;
             this.lblDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblDate.Location = new System.Drawing.Point(63, 116);
-            this.lblDate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblDate.Location = new System.Drawing.Point(84, 143);
             this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(111, 20);
+            this.lblDate.Size = new System.Drawing.Size(134, 25);
             this.lblDate.TabIndex = 2;
             this.lblDate.Text = "Billing Date :";
             this.lblDate.Click += new System.EventHandler(this.lblDate_Click);
@@ -92,20 +89,20 @@
             // 
             this.cmbPatient.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.cmbPatient.FormattingEnabled = true;
-            this.cmbPatient.Location = new System.Drawing.Point(245, 25);
-            this.cmbPatient.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbPatient.Location = new System.Drawing.Point(327, 31);
+            this.cmbPatient.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmbPatient.Name = "cmbPatient";
-            this.cmbPatient.Size = new System.Drawing.Size(118, 21);
+            this.cmbPatient.Size = new System.Drawing.Size(156, 24);
             this.cmbPatient.TabIndex = 3;
             // 
             // txtAmount
             // 
             this.txtAmount.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.txtAmount.Location = new System.Drawing.Point(245, 68);
-            this.txtAmount.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtAmount.Location = new System.Drawing.Point(327, 84);
+            this.txtAmount.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtAmount.Multiline = true;
             this.txtAmount.Name = "txtAmount";
-            this.txtAmount.Size = new System.Drawing.Size(118, 25);
+            this.txtAmount.Size = new System.Drawing.Size(156, 30);
             this.txtAmount.TabIndex = 4;
             this.txtAmount.TextChanged += new System.EventHandler(this.txtAmount_TextChanged);
             // 
@@ -113,10 +110,10 @@
             // 
             this.dtpDate.CalendarForeColor = System.Drawing.SystemColors.ControlLight;
             this.dtpDate.CalendarMonthBackground = System.Drawing.SystemColors.HotTrack;
-            this.dtpDate.Location = new System.Drawing.Point(245, 115);
-            this.dtpDate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtpDate.Location = new System.Drawing.Point(327, 142);
+            this.dtpDate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtpDate.Name = "dtpDate";
-            this.dtpDate.Size = new System.Drawing.Size(177, 20);
+            this.dtpDate.Size = new System.Drawing.Size(235, 22);
             this.dtpDate.TabIndex = 5;
             this.dtpDate.ValueChanged += new System.EventHandler(this.dtpDate_ValueChanged);
             // 
@@ -125,10 +122,10 @@
             this.btnGenerate.BackColor = System.Drawing.Color.Cyan;
             this.btnGenerate.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnGenerate.Font = new System.Drawing.Font("Microsoft JhengHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGenerate.Location = new System.Drawing.Point(245, 160);
-            this.btnGenerate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnGenerate.Location = new System.Drawing.Point(327, 197);
+            this.btnGenerate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnGenerate.Name = "btnGenerate";
-            this.btnGenerate.Size = new System.Drawing.Size(94, 23);
+            this.btnGenerate.Size = new System.Drawing.Size(125, 28);
             this.btnGenerate.TabIndex = 6;
             this.btnGenerate.Text = "Generate Bill";
             this.btnGenerate.UseVisualStyleBackColor = false;
@@ -139,12 +136,12 @@
             this.dataGridViewBills.BackgroundColor = System.Drawing.Color.DarkSlateGray;
             this.dataGridViewBills.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewBills.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.dataGridViewBills.Location = new System.Drawing.Point(45, 196);
-            this.dataGridViewBills.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridViewBills.Location = new System.Drawing.Point(60, 241);
+            this.dataGridViewBills.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridViewBills.Name = "dataGridViewBills";
             this.dataGridViewBills.RowHeadersWidth = 51;
             this.dataGridViewBills.RowTemplate.Height = 24;
-            this.dataGridViewBills.Size = new System.Drawing.Size(514, 159);
+            this.dataGridViewBills.Size = new System.Drawing.Size(685, 196);
             this.dataGridViewBills.TabIndex = 7;
             this.dataGridViewBills.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewBills_CellContentClick);
             // 
@@ -172,10 +169,10 @@
             this.btnPrintInvoice.BackColor = System.Drawing.Color.Cyan;
             this.btnPrintInvoice.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPrintInvoice.Font = new System.Drawing.Font("Microsoft JhengHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPrintInvoice.Location = new System.Drawing.Point(356, 160);
-            this.btnPrintInvoice.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnPrintInvoice.Location = new System.Drawing.Point(475, 197);
+            this.btnPrintInvoice.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnPrintInvoice.Name = "btnPrintInvoice";
-            this.btnPrintInvoice.Size = new System.Drawing.Size(103, 23);
+            this.btnPrintInvoice.Size = new System.Drawing.Size(137, 28);
             this.btnPrintInvoice.TabIndex = 8;
             this.btnPrintInvoice.Text = "Print Invoice";
             this.btnPrintInvoice.UseVisualStyleBackColor = false;
@@ -186,20 +183,21 @@
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(423, -18);
+            this.pictureBox1.Location = new System.Drawing.Point(564, -22);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(179, 99);
+            this.pictureBox1.Size = new System.Drawing.Size(239, 122);
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // BillsForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(600, 366);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnPrintInvoice);
             this.Controls.Add(this.dataGridViewBills);
@@ -210,7 +208,7 @@
             this.Controls.Add(this.lblDate);
             this.Controls.Add(this.lblAmount);
             this.Controls.Add(this.lblPatient);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "BillsForm";
             this.Text = "BillsForm";
             this.Load += new System.EventHandler(this.BillsForm_Load);

@@ -12,6 +12,8 @@ namespace HospitalManagementSystem
         {
             InitializeComponent();
             this.Load += BillsForm_Load;
+            printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(printDocument1_PrintPage);
+
 
         }
 
@@ -93,7 +95,7 @@ namespace HospitalManagementSystem
 
 
             // Header
-            e.Graphics.DrawString("HOSPITAL INVOICE", new Font("Arial", 20, FontStyle.Bold), Brushes.Black, 200, 50);
+            e.Graphics.DrawString("MediSys INVOICE", new Font("Arial", 20, FontStyle.Bold), Brushes.Black, 200, 50);
             e.Graphics.DrawString("Date: " + date, new Font("Arial", 10), Brushes.Black, 50, 100);
             e.Graphics.DrawString("Patient: " + patient, new Font("Arial", 10), Brushes.Black, 50, 120);
            // e.Graphics.DrawString("Doctor: " + doctor, new Font("Arial", 10), Brushes.Black, 50, 140);
