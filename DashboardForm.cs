@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace HospitalManagementSystem
@@ -56,6 +49,12 @@ namespace HospitalManagementSystem
         {
             Form1 gomain = new Form1();
             gomain.Show();
+        }
+
+        private void prescription_Click(object sender, EventArgs e)
+        {
+            PrescriptionsForm prescription = new PrescriptionsForm();
+            prescription.Show();
         }
     }
 }

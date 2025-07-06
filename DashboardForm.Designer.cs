@@ -35,6 +35,7 @@
             this.billing = new System.Windows.Forms.Button();
             this.medicatebtn = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.prescription = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -44,7 +45,7 @@
             this.btnPatients.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnPatients.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPatients.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnPatients.Location = new System.Drawing.Point(224, 153);
+            this.btnPatients.Location = new System.Drawing.Point(72, 84);
             this.btnPatients.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnPatients.Name = "btnPatients";
             this.btnPatients.Size = new System.Drawing.Size(147, 63);
@@ -59,10 +60,10 @@
             this.mngDoctors.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.mngDoctors.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mngDoctors.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.mngDoctors.Location = new System.Drawing.Point(436, 153);
+            this.mngDoctors.Location = new System.Drawing.Point(309, 84);
             this.mngDoctors.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.mngDoctors.Name = "mngDoctors";
-            this.mngDoctors.Size = new System.Drawing.Size(147, 60);
+            this.mngDoctors.Size = new System.Drawing.Size(147, 63);
             this.mngDoctors.TabIndex = 1;
             this.mngDoctors.Text = "Manage Doctors";
             this.mngDoctors.UseVisualStyleBackColor = false;
@@ -75,10 +76,10 @@
             this.appointments.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.appointments.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.appointments.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.appointments.Location = new System.Drawing.Point(541, 272);
+            this.appointments.Location = new System.Drawing.Point(309, 200);
             this.appointments.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.appointments.Name = "appointments";
-            this.appointments.Size = new System.Drawing.Size(163, 46);
+            this.appointments.Size = new System.Drawing.Size(147, 48);
             this.appointments.TabIndex = 2;
             this.appointments.Text = "Appointments";
             this.appointments.UseVisualStyleBackColor = false;
@@ -90,10 +91,10 @@
             this.billing.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.billing.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.billing.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.billing.Location = new System.Drawing.Point(135, 272);
+            this.billing.Location = new System.Drawing.Point(606, 362);
             this.billing.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.billing.Name = "billing";
-            this.billing.Size = new System.Drawing.Size(147, 47);
+            this.billing.Size = new System.Drawing.Size(173, 47);
             this.billing.TabIndex = 3;
             this.billing.Text = "Billing";
             this.billing.UseVisualStyleBackColor = false;
@@ -105,10 +106,10 @@
             this.medicatebtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.medicatebtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.medicatebtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.medicatebtn.Location = new System.Drawing.Point(333, 272);
+            this.medicatebtn.Location = new System.Drawing.Point(72, 200);
             this.medicatebtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.medicatebtn.Name = "medicatebtn";
-            this.medicatebtn.Size = new System.Drawing.Size(147, 46);
+            this.medicatebtn.Size = new System.Drawing.Size(147, 48);
             this.medicatebtn.TabIndex = 4;
             this.medicatebtn.Text = "Medication ";
             this.medicatebtn.UseVisualStyleBackColor = false;
@@ -120,12 +121,26 @@
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox1.Location = new System.Drawing.Point(583, -2);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(224, 149);
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // prescription
+            // 
+            this.prescription.BackColor = System.Drawing.Color.Cyan;
+            this.prescription.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.prescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.prescription.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(63)))));
+            this.prescription.Location = new System.Drawing.Point(390, 362);
+            this.prescription.Name = "prescription";
+            this.prescription.Size = new System.Drawing.Size(178, 47);
+            this.prescription.TabIndex = 6;
+            this.prescription.Text = "Prescriptions ";
+            this.prescription.UseVisualStyleBackColor = false;
+            this.prescription.Click += new System.EventHandler(this.prescription_Click);
             // 
             // DashboardForm
             // 
@@ -134,6 +149,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.prescription);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.medicatebtn);
             this.Controls.Add(this.billing);
@@ -157,5 +173,6 @@
         private System.Windows.Forms.Button billing;
         private System.Windows.Forms.Button medicatebtn;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button prescription;
     }
 }
