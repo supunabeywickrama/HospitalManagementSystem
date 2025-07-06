@@ -114,4 +114,16 @@ Invoices include:
 
 
 ![Dashboard](https://github.com/supunabeywickrama/HospitalManagementSystem/blob/master/New%20folder%20(2)/WhatsApp%20Image%202025-07-06%20at%2020.59.09_4965ec82.jpg)
-![Login](screenshots/login.png)
+![Dashboard](https://github.com/supunabeywickrama/HospitalManagementSystem/blob/master/New%20folder%20(2)/WhatsApp%20Image%202025-07-06%20at%2020.59.41_6133dd3c.jpg)
+![Dashboard](https://github.com/supunabeywickrama/HospitalManagementSystem/blob/master/New%20folder%20(2)/WhatsApp%20Image%202025-07-06%20at%2021.00.35_da2c0d6e.jpg)
+![Dashboard](https://github.com/supunabeywickrama/HospitalManagementSystem/blob/master/New%20folder%20(2)/WhatsApp%20Image%202025-07-06%20at%2021.01.49_9ff6ae22.jpg)
+![Dashboard](https://github.com/supunabeywickrama/HospitalManagementSystem/blob/master/New%20folder%20(2)/WhatsApp%20Image%202025-07-06%20at%2021.02.27_d07cc070.jpg)
+![Dashboard](https://github.com/supunabeywickrama/HospitalManagementSystem/blob/master/New%20folder%20(2)/WhatsApp%20Image%202025-07-06%20at%2021.03.00_723cdf4f.jpg)
+![Dashboard](https://github.com/supunabeywickrama/HospitalManagementSystem/blob/master/New%20folder%20(2)/WhatsApp%20Image%202025-07-06%20at%2021.03.48_11b9b5fc.jpg)
+![Dashboard](https://github.com/supunabeywickrama/HospitalManagementSystem/blob/master/New%20folder%20(2)/WhatsApp%20Image%202025-07-06%20at%2021.04.26_9ff5e15e.jpg)
+![Dashboard](https://github.com/supunabeywickrama/HospitalManagementSystem/blob/master/New%20folder%20(2)/WhatsApp%20Image%202025-07-06%20at%2021.05.49_32122ced.jpg)
+![Dashboard](https://github.com/supunabeywickrama/HospitalManagementSystem/blob/master/New%20folder%20(2)/WhatsApp%20Image%202025-07-06%20at%2021.06.15_b6dd6088.jpg)
+![Dashboard](https://github.com/supunabeywickrama/HospitalManagementSystem/blob/master/New%20folder%20(2)/WhatsApp%20Image%202025-07-06%20at%2021.08.16_a24f570b.jpg)
+
+
+
