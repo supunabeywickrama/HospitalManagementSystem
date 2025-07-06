@@ -1,93 +1,117 @@
-🏥 Hospital Management System — MediSys
-A complete desktop-based Hospital Management System built with C# (.NET Windows Forms) and SQL Server for managing patients, doctors, medications, prescriptions, billing, and appointments.
+# 🏥 MediSys — Hospital Management System  
+[![Contributors](https://img.shields.io/badge/contributors-1-blue.svg)](CONTRIBUTORS.md)  
+[![Last Commit](https://img.shields.io/github/last-commit/yourusername/MediSys)](https://github.com/yourusername/MediSys)
 
+---
 
-🚀 Features
-✅ Secure User Login with BCrypt Hashed Passwords
-✅ Role-based access: Admin, Doctor, etc.
-✅ Patient Management (CRUD)
-✅ Appointment Scheduling
-✅ Medication & Stock Management
-✅ Bill Generation with Professional PDF Invoices
-✅ Prescription Management
-✅ Dashboard Summary
-✅ Print Preview Support
-✅ Image-based branding/logo in invoices
-✅ Clean, responsive UI with custom backgrounds
+## 🌟 About the Project
 
-📁 Project Structure
-bash
-Copy code
-HospitalManagementSystem/
+**MediSys** is a complete desktop-based Hospital Management System developed using **C# (.NET Windows Forms)** and **SQL Server**. It is designed to streamline hospital operations such as managing patients, doctors, medications, prescriptions, billing, and appointments.
+
+This project was created as part of my learning journey in mastering **C#**, **WinForms**, and **SQL-based backend systems**.
+
+---
+
+## 🚀 Features
+
+- 🔐 **Secure Login** using BCrypt hashed passwords  
+- 👥 **Role-Based Access Control** (Admin, Doctor)  
+- 🏥 **Patient Management** with full CRUD functionality  
+- 📅 **Appointment Scheduling**  
+- 💊 **Medication & Stock Tracking**  
+- 🧾 **Professional Billing System** (with PDF invoice printing)  
+- 📝 **Prescription Management**  
+- 📊 **Dashboard Summary View**  
+- 🖨️ **Print Preview Support**  
+- 🖼️ **Branded Invoices** with hospital logos  
+
+---
+```cmd
+## 🗂️ Project Structure
+
+MediSys/
 │
-├── AppointmentsForm.cs       # Manage patient appointments
-├── BillsForm.cs              # Generate and print hospital bills
-├── CreateAccountForm.cs      # Register new users with password hashing
-├── DashboardForm.cs          # Home panel after login
-├── DoctorsForm.cs            # Manage doctor records
-├── MedicationsForm.cs        # Add/edit medications and stock levels
-├── PatientsForm.cs           # Handle patient records
-├── PrescriptionsForm.cs      # Assign and print prescriptions
-├── Form1.cs (Login)          # User login logic (hashed verification)
-├── StartForm.cs              # Initial splash or navigation form
-├── DatabaseHelper.cs         # SQL utility functions
-├── Resources/                # App icons, logos (e.g., MEDISyslogo.png)
-├── Program.cs                # Main entry point
-└── packages.config           # Dependencies and libraries
-🔐 Security
-BCrypt password hashing used for storing and verifying user credentials.
+├── AppointmentsForm.cs # Manage appointments
+├── BillsForm.cs # Generate and print bills
+├── CreateAccountForm.cs # User registration (with password hashing)
+├── DashboardForm.cs # Dashboard panel
+├── DoctorsForm.cs # Manage doctor information
+├── MedicationsForm.cs # Manage medicines and stock
+├── PatientsForm.cs # Manage patient data
+├── PrescriptionsForm.cs # Create and print prescriptions
+├── Form1.cs # Login form and logic
+├── StartForm.cs # Application splash screen or landing page
+├── DatabaseHelper.cs # SQL Server connection and queries
+├── Resources/ # Images (e.g., MEDISyslogo.png)
+├── Program.cs # Main entry point
+└── packages.config # .NET packages and dependencies
+```
 
-Prevents direct password comparison with SQL.
 
-💾 Technologies Used
-C# .NET Framework
 
-Windows Forms (WinForms)
+---
 
-SQL Server
+## 🛡️ Security
 
-ADO.NET
+- Passwords are **hashed with BCrypt.Net** before storing in the database.  
+- Secure verification prevents raw password leaks or SQL injection attacks.
 
-BCrypt.Net for password hashing
+---
 
-System.Drawing.Printing for invoices
+## 💻 Technologies Used
 
-🖨 Sample Invoice Preview
-A custom print document with hospital branding, contact details, patient info, and itemized charges.
+- **C# (.NET Framework)**  
+- **Windows Forms (WinForms)**  
+- **SQL Server**  
+- **ADO.NET**  
+- **BCrypt.Net** for secure password hashing  
+- **System.Drawing.Printing** for professional invoice generation  
 
-⚙ How to Run
-Open solution in Visual Studio
+---
 
-Configure your SQL Server database:
+## 🧾 Sample Invoice
 
-Update connection string in DatabaseHelper.cs
+Invoices include:
 
-Run StartForm.cs or Form1.cs as startup
+- Hospital branding (logo & address)  
+- Patient information  
+- Itemized charges with cost breakdown  
+- Printable or exportable as PDF  
 
-Create an account and log in
+---
 
-Explore modules via the Dashboard
+## ⚙️ How to Run the Project
 
-📌 Future Enhancements (Optional)
-Export Reports to Excel/PDF
+1. **Open in Visual Studio**  
+   - Open the `.sln` file in Visual Studio.
 
-Email notifications for appointments
+2. **Configure the Database**  
+   - Update the SQL Server connection string in `DatabaseHelper.cs`.
 
-Add search & filter to DataGridViews
+3. **Run the Application**  
+   - Set `StartForm.cs` or `Form1.cs` as the startup form.  
+   - Compile and run the project.
 
-Convert to Web Version using ASP.NET Core
+4. **Create a User Account**  
+   - Use the Create Account form to register.  
+   - Log in and explore the system via the dashboard.
 
-REST API + Flutter/React Native app
+---
 
-👨‍💻 Author
-Supun Tharaka
-🎓 Undergraduate | University of Kelaniya
-🔗 GitHub: YourGitHubUsername
+## 🧩 Optional Future Enhancements
 
-📸 Screenshots
-You can add screenshot images like:
+- 📤 Export reports to Excel or PDF  
+- 📧 Email appointment notifications  
+- 🔍 Search and filter in data tables  
+- 🌐 Convert to a web version using ASP.NET Core  
+- 📱 Build mobile apps using Flutter or React Native + REST API  
 
-md
-Copy code
+---
+
+## 📸 Screenshots
+
+> Add the following screenshots to a `/screenshots` folder in your repo:
+
+```markdown
 ![Dashboard](screenshots/dashboard.png)
 ![Login](screenshots/login.png)
