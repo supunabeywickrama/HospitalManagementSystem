@@ -86,53 +86,94 @@ namespace HospitalManagementSystem
 
         private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
-           if (dataGridViewBills.CurrentRow == null) return;
+            if (dataGridViewBills.CurrentRow == null) return;
 
             int billId = Convert.ToInt32(dataGridViewBills.CurrentRow.Cells["BillID"].Value);
             string patient = dataGridViewBills.CurrentRow.Cells["PatientName"].Value.ToString();
             string date = Convert.ToDateTime(dataGridViewBills.CurrentRow.Cells["BillingDate"].Value).ToShortDateString();
             string total = Convert.ToDecimal(dataGridViewBills.CurrentRow.Cells["Amount"].Value).ToString("0.00");
 
+            int y = 40;
+            Font headerFont = new Font("Arial", 20, FontStyle.Bold);
+            Font subHeaderFont = new Font("Arial", 10);
+            Font bodyFont = new Font("Arial", 10);
+            Font boldFont = new Font("Arial", 10, FontStyle.Bold);
 
-            // Header
-            e.Graphics.DrawString("MediSys INVOICE", new Font("Arial", 20, FontStyle.Bold), Brushes.Black, 200, 50);
-            e.Graphics.DrawString("Date: " + date, new Font("Arial", 10), Brushes.Black, 50, 100);
-            e.Graphics.DrawString("Patient: " + patient, new Font("Arial", 10), Brushes.Black, 50, 120);
-           // e.Graphics.DrawString("Doctor: " + doctor, new Font("Arial", 10), Brushes.Black, 50, 140);
-            e.Graphics.DrawString("Invoice ID: " + billId.ToString(), new Font("Arial", 10), Brushes.Black, 50, 160);
+            // ✅ Draw Logo at Top-Right
+            try
+            {
+                string logoPath = @"D:\visual project\test_01\HospitalManagementSystem\MEDISyslogo_2.png";
+                Image logo = Image.FromFile(logoPath);
+                e.Graphics.DrawImage(logo, 650, 20, 100, 100); // Adjust X, Y, Width, Height as needed
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Logo could not be loaded: " + ex.Message);
+            }
 
-            // Line
-            e.Graphics.DrawLine(Pens.Black, 50, 180, 750, 180);
+            // 🏥 Hospital Header
+            e.Graphics.DrawString("MEDISys HOSPITAL", headerFont, Brushes.DarkBlue, 200, y);
+            y += 35;
+            e.Graphics.DrawString("23 Kandy road, Dalugama", subHeaderFont, Brushes.Black, 220, y);
+            y += 20;
+            e.Graphics.DrawString("Phone: +94 11 256 0000 | Email: contact@medisys.lk", subHeaderFont, Brushes.Black, 220, y);
+            y += 30;
+
+            // 🔻 Divider Line
+            e.Graphics.DrawLine(Pens.Black, 50, y, 750, y);
+            y += 20;
+
+            // 📋 Invoice Header
+            e.Graphics.DrawString("INVOICE", new Font("Arial", 16, FontStyle.Bold), Brushes.Black, 50, y);
+            y += 30;
+
+            e.Graphics.DrawString("Invoice ID: " + billId, bodyFont, Brushes.Black, 50, y);
+            e.Graphics.DrawString("Date: " + date, bodyFont, Brushes.Black, 600, y);
+            y += 20;
+            e.Graphics.DrawString("Patient: " + patient, bodyFont, Brushes.Black, 50, y);
+            y += 20;
+
+            // 🔻 Divider
+            y += 10;
+            e.Graphics.DrawLine(Pens.Black, 50, y, 750, y);
+            y += 20;
 
             // Table Header
-            e.Graphics.DrawString("Description", new Font("Arial", 10, FontStyle.Bold), Brushes.Black, 50, 200);
-            e.Graphics.DrawString("Amount", new Font("Arial", 10, FontStyle.Bold), Brushes.Black, 600, 200);
+            e.Graphics.DrawString("Description", boldFont, Brushes.Black, 50, y);
+            e.Graphics.DrawString("Amount (Rs.)", boldFont, Brushes.Black, 600, y);
+            y += 20;
 
-            // Fetch and print bill details
+            // Table Content
             string query = "SELECT Description, Amount FROM BillDetails WHERE BillID = @BillID";
             SqlParameter[] parameters = { new SqlParameter("@BillID", billId) };
             DataTable dt = DatabaseHelper.ExecuteQuery(query, parameters);
 
-            int y = 220;
             foreach (DataRow row in dt.Rows)
             {
                 string desc = row["Description"].ToString();
                 string amt = Convert.ToDecimal(row["Amount"]).ToString("0.00");
 
+                e.Graphics.DrawString(desc, bodyFont, Brushes.Black, 50, y);
+                e.Graphics.DrawString("Rs. " + amt, bodyFont, Brushes.Black, 600, y);
                 y += 20;
-                e.Graphics.DrawString(desc, new Font("Arial", 10), Brushes.Black, 50, y);
-                e.Graphics.DrawString(amt, new Font("Arial", 10), Brushes.Black, 600, y);              
             }
 
-            // Line
-            y += 20;
-            e.Graphics.DrawLine(Pens.Black, 50, y, 750, y);
-            
-
             // Total
+            y += 10;
+            e.Graphics.DrawLine(Pens.Black, 50, y, 750, y);
             y += 20;
             e.Graphics.DrawString("Total: Rs. " + total, new Font("Arial", 12, FontStyle.Bold), Brushes.Black, 600, y);
+
+            // 📝 Footer
+            y += 40;
+            e.Graphics.DrawLine(Pens.Gray, 50, y, 750, y);
+            y += 20;
+            e.Graphics.DrawString("Thank you for trusting MediSys Hospital.", subHeaderFont, Brushes.Gray, 50, y);
+            y += 20;
+            e.Graphics.DrawString("This is a computer-generated invoice. No signature required.", new Font("Arial", 8, FontStyle.Italic), Brushes.Gray, 50, y);
         }
+
+
 
         private void lblPatient_Click(object sender, EventArgs e)
         {

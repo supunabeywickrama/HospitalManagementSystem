@@ -144,13 +144,13 @@
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.InactiveCaption;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Transparent;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.WhiteSmoke;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewMedications.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewMedications.GridColor = System.Drawing.Color.Black;
-            this.dataGridViewMedications.Location = new System.Drawing.Point(81, 242);
+            this.dataGridViewMedications.Location = new System.Drawing.Point(82, 242);
             this.dataGridViewMedications.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridViewMedications.Name = "dataGridViewMedications";
             this.dataGridViewMedications.RowHeadersWidth = 51;
