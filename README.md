@@ -112,6 +112,6 @@ Invoices include:
 
 > Add the following screenshots to a `/screenshots` folder in your repo:
 
-```markdown
-![Dashboard](screenshots/dashboard.png)
+
+![Dashboard](https://github.com/supunabeywickrama/HospitalManagementSystem/blob/master/New%20folder%20(2)/WhatsApp%20Image%202025-07-06%20at%2020.59.09_4965ec82.jpg)
 ![Login](screenshots/login.png)
