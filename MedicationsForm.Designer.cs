@@ -40,6 +40,8 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.dataGridViewMedications = new System.Windows.Forms.DataGridView();
+            this.stocllbl = new System.Windows.Forms.Label();
+            this.stocktxt = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMedications)).BeginInit();
             this.SuspendLayout();
@@ -63,7 +65,7 @@
             this.lblDescription.BackColor = System.Drawing.Color.Transparent;
             this.lblDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDescription.ForeColor = System.Drawing.Color.Teal;
-            this.lblDescription.Location = new System.Drawing.Point(172, 135);
+            this.lblDescription.Location = new System.Drawing.Point(164, 109);
             this.lblDescription.Name = "lblDescription";
             this.lblDescription.Size = new System.Drawing.Size(118, 20);
             this.lblDescription.TabIndex = 1;
@@ -80,7 +82,7 @@
             // 
             // txtDescription
             // 
-            this.txtDescription.Location = new System.Drawing.Point(303, 134);
+            this.txtDescription.Location = new System.Drawing.Point(303, 107);
             this.txtDescription.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.Size = new System.Drawing.Size(140, 22);
@@ -156,8 +158,28 @@
             this.dataGridViewMedications.Name = "dataGridViewMedications";
             this.dataGridViewMedications.RowHeadersWidth = 51;
             this.dataGridViewMedications.RowTemplate.Height = 24;
-            this.dataGridViewMedications.Size = new System.Drawing.Size(573, 150);
+            this.dataGridViewMedications.Size = new System.Drawing.Size(554, 150);
             this.dataGridViewMedications.TabIndex = 9;
+            this.dataGridViewMedications.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewMedications_CellContentClick_1);
+            // 
+            // stocllbl
+            // 
+            this.stocllbl.AutoSize = true;
+            this.stocllbl.BackColor = System.Drawing.Color.Transparent;
+            this.stocllbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.stocllbl.ForeColor = System.Drawing.Color.Green;
+            this.stocllbl.Location = new System.Drawing.Point(211, 152);
+            this.stocllbl.Name = "stocllbl";
+            this.stocllbl.Size = new System.Drawing.Size(81, 20);
+            this.stocllbl.TabIndex = 10;
+            this.stocllbl.Text = "Quntity :";
+            // 
+            // stocktxt
+            // 
+            this.stocktxt.Location = new System.Drawing.Point(303, 152);
+            this.stocktxt.Name = "stocktxt";
+            this.stocktxt.Size = new System.Drawing.Size(140, 22);
+            this.stocktxt.TabIndex = 11;
             // 
             // MedicationsForm
             // 
@@ -165,6 +187,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.stocktxt);
+            this.Controls.Add(this.stocllbl);
             this.Controls.Add(this.dataGridViewMedications);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnDelete);
@@ -198,5 +222,7 @@
         public System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.DataGridView dataGridViewMedications;
+        private System.Windows.Forms.Label stocllbl;
+        private System.Windows.Forms.TextBox stocktxt;
     }
 }

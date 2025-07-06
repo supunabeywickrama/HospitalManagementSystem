@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient; // Change this to System.Data.SqlClient to match the SqlParameter type
+using BCrypt.Net;
 
 namespace HospitalManagementSystem
 {
@@ -21,24 +22,38 @@ namespace HospitalManagementSystem
         private void btnLogin_Click(object sender, EventArgs e)
         {
             string username = txtUsername.Text.Trim();
-            string password = txtPassword.Text.Trim();
+            string password = txtPassword.Text; // Plain password entered by user
 
-            // Use parameterized query to prevent SQL injection
-            string query = "SELECT * FROM Users WHERE Username = @username AND Password = @password";
+            // Fetch hashed password from DB by username
+            string query = "SELECT Password, Role FROM Users WHERE Username = @username";
             SqlParameter[] parameters = new SqlParameter[]
             {
-                    new SqlParameter("@username", username),
-                    new SqlParameter("@password", password)
+                new SqlParameter("@username", username)
             };
+
             DataTable result = DatabaseHelper.ExecuteQuery(query, parameters);
 
             if (result.Rows.Count > 0)
             {
-               // MessageBox.Show("Login successful!", "Success");
-                // Navigate to dashboard or home form
-                DashboardForm dashboard = new DashboardForm();
-                dashboard.Show();
-                this.Hide();
+                string storedHashedPassword = result.Rows[0]["Password"].ToString();
+                string role = result.Rows[0]["Role"].ToString();
+
+                // Compare entered password with stored hash
+                bool passwordMatch = BCrypt.Net.BCrypt.Verify(password, storedHashedPassword);
+
+                if (passwordMatch)
+                {
+                    MessageBox.Show("Login successful!", "Success");
+
+                    // Navigate to dashboard or based on role
+                    DashboardForm dashboard = new DashboardForm();
+                    dashboard.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Invalid username or password!", "Login Failed");
+                }
             }
             else
             {

@@ -129,18 +129,42 @@ namespace HospitalManagementSystem
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            if (dataGridViewPatients.CurrentRow == null) return;
+            if (dataGridViewPatients.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Please select a patient to delete.");
+                return;
+            }
 
-            int id = Convert.ToInt32(dataGridViewPatients.CurrentRow.Cells["PatientID"].Value);
-            string query = "DELETE FROM Patients WHERE PatientID=@PatientID";
+            DataGridViewRow selectedRow = dataGridViewPatients.SelectedRows[0];
+
+            if (selectedRow.Cells["PatientID"].Value == null)
+            {
+                MessageBox.Show("Selected row does not contain a valid Patient ID.");
+                return;
+            }
+
+            int id = Convert.ToInt32(selectedRow.Cells["PatientID"].Value);
+
+            DialogResult confirm = MessageBox.Show("Are you sure you want to delete this patient?", "Confirm Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (confirm == DialogResult.No)
+                return;
+
+            string query = "DELETE FROM Patients WHERE PatientID = @PatientID";
             SqlParameter[] parameters = new SqlParameter[]
             {
-                new SqlParameter("@PatientID", id)
+              new SqlParameter("@PatientID", id)
             };
 
-            DatabaseHelper.ExecuteNonQuery(query, parameters);
-            MessageBox.Show("Patient deleted");
-            LoadPatients();
+            int result = DatabaseHelper.ExecuteNonQuery(query, parameters);
+            if (result > 0)
+            {
+                MessageBox.Show("Patient deleted successfully.");
+                LoadPatients();
+            }
+            else
+            {
+                MessageBox.Show("Failed to delete the patient.");
+            }
         }
 
         private void label2_Click(object sender, EventArgs e)
