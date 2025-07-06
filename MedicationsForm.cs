@@ -82,12 +82,7 @@ namespace HospitalManagementSystem
 
         private void dataGridViewMedications_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0)
-            {
-                DataGridViewRow row = dataGridViewMedications.Rows[e.RowIndex];
-                txtName.Text = row.Cells["Name"].Value.ToString();
-                txtDescription.Text = row.Cells["Description"].Value.ToString();
-            }
+
         }
 
         private void lblName_Click(object sender, EventArgs e)

@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MedicationsForm));
             this.lblName = new System.Windows.Forms.Label();
             this.lblDescription = new System.Windows.Forms.Label();
@@ -39,11 +37,11 @@
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
-            this.dataGridViewMedications = new System.Windows.Forms.DataGridView();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMedications)).BeginInit();
+            this.dataGridViewMedications = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMedications)).BeginInit();
             this.SuspendLayout();
             // 
             // lblName
@@ -133,32 +131,6 @@
             this.btnDelete.UseVisualStyleBackColor = false;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
-            // dataGridViewMedications
-            // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(239)))), ((int)(((byte)(249)))));
-            this.dataGridViewMedications.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridViewMedications.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.dataGridViewMedications.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridViewMedications.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dataGridViewMedications.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewMedications.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridViewMedications.GridColor = System.Drawing.Color.Black;
-            this.dataGridViewMedications.Location = new System.Drawing.Point(82, 242);
-            this.dataGridViewMedications.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dataGridViewMedications.Name = "dataGridViewMedications";
-            this.dataGridViewMedications.RowHeadersWidth = 51;
-            this.dataGridViewMedications.RowTemplate.Height = 24;
-            this.dataGridViewMedications.Size = new System.Drawing.Size(648, 170);
-            this.dataGridViewMedications.TabIndex = 7;
-            this.dataGridViewMedications.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewMedications_CellContentClick);
-            // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
@@ -177,14 +149,24 @@
             this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
             // 
+            // dataGridViewMedications
+            // 
+            this.dataGridViewMedications.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewMedications.Location = new System.Drawing.Point(102, 274);
+            this.dataGridViewMedications.Name = "dataGridViewMedications";
+            this.dataGridViewMedications.RowHeadersWidth = 51;
+            this.dataGridViewMedications.RowTemplate.Height = 24;
+            this.dataGridViewMedications.Size = new System.Drawing.Size(573, 150);
+            this.dataGridViewMedications.TabIndex = 9;
+            // 
             // MedicationsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.dataGridViewMedications);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnAdd);
@@ -197,8 +179,8 @@
             this.Name = "MedicationsForm";
             this.Text = "MedicationsForm";
             this.Load += new System.EventHandler(this.MedicationsForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMedications)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMedications)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -213,8 +195,8 @@
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnDelete;
-        private System.Windows.Forms.DataGridView dataGridViewMedications;
         public System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ImageList imageList1;
+        private System.Windows.Forms.DataGridView dataGridViewMedications;
     }
 }
